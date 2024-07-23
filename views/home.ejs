@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Home | Crime Tracker</title>
+        <!-- Favicon icon -->
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/police-handcuffs.png" >
+        <!-- Custom CSS -->
+        <link href="plugins/bower_components/chartist/dist/chartist.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.css">
+        <!-- Custom CSS -->
+        <link href="css/style.min.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full" data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
+          <%- include('partials/header') %>
+          <div class="page-wrapper">
+        
+            <!-- Bread crumb and right sidebar toggle -->
+        
+            <div class="page-breadcrumb bg-white">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                        <h4 class="page-title">Welcome To Crime Tracker</h4>
+                    </div>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+
+            <div>
+                <h2 style="padding-left: 20px;">Hello There! <br></h2>
+                <p style="padding-left: 20px;">This is a crime tracker system, it lets you view crime that happened in your location for the past year. Crime tracker lets you you know which places to go to or which safe routes you can take to your destination.
+                    You can also report that is happening in your location
+                </p>
+            </div>
+        
+            <div class="container-fluid">
+                <!-- 6 Categories -->
+                <div class="row justify-content-center">
+
+                    <div class="col-lg-4 col-md-12">
+                        <div class="white-box ">
+                            <h3 class="box-title">Report Crime</h3>
+                            <div>
+                              <p>This is where a user is able to report crime activities that occured or might occur using the crime report form. The user can attach file, such as: videos,images and etc.
+                                Which will help South African police with the investigation of the crime.
+                            </p>
+                                <a href="/report-crime" class="btn btn-primary">Report Crime</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <div class="white-box ">
+                            <h3 class="box-title">Crime Hotspot - View Map</h3>
+                            <p>This is where a user is able to view their preferred hotspot crime areas and will be graphically represented using a real life geographic map. <br><br><br>
+                            </p>
+                            <div>
+                                <a href="/view-crimes" class="btn btn-primary">Crime Hotspots</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <div class="white-box ">
+                            <h3 class="box-title">View Crime Statistics</h3>
+                            <p>This is where a user is able to view their preferred hotspot crime areas and will be graphically represented using a real life geographic map. <br><br><br>
+                            </p>
+                            <div>
+                                <a href="/view-statistics" class="btn btn-primary">Statistics</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          <%- include('partials/footer') %> 
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<header class="topbar" data-navbarbg="skin5">
+    <div>
+        <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+        
+            <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">        
+                <!-- Right side toggle and nav items -->
+                <ul class="navbar-nav ms-auto d-flex align-items-center">
+                    <!-- Home -->
+                    <li>
+                        <a class="home" href="/home">
+                            HOME
+                        </a>
+                    </li>
+                    <ul>
+                    <!-- Register -->
+                        <div>
+                            <li>
+                                <a class="login" href="./index.html">
+                                LOGIN 
+                                </a>
+                            </li>
+                        </div>
+                    </ul>
+                    <!-- CONTACT -->
+                    <ul>
+                        <li>
+                            <a class="about" href="/about">
+                            ABOUT
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- User profile -->
+                    <li>
+                        <a class="profile-pic" href="/me">
+                            <img src="images/user.jpg" alt="user-img" width="36"
+                                class="img-circle"><span class="text-white font-medium"><%=data.user.firstName%></span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>

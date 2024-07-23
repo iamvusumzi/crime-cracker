@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home | Crime Tracker</title>
+  <!-- Favicon icon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/police-handcuffs.png" >
+  <!-- Custom CSS -->
+  <link href="plugins/bower_components/chartist/dist/chartist.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.css">
+  <!-- Custom CSS -->
+  <link href="css/style.min.css" rel="stylesheet">
+  <link rel='stylesheet' type='text/css' href='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.20.0/maps/maps.css'>
+  <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.20.0/maps/maps-web.min.js"></script>
+</head>
+<body>
+    <!-- Preloader - style you can find in spinners.css --
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div> -->
+
+    <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
+    data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
+    <!-- Topbar header - style you can find in pages.scss -->
+    <header class="topbar" data-navbarbg="skin5">
+        <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+            <div class="navbar-header" data-logobg="skin6">
+                <!-- Logo -->
+                <a class="navbar-brand" href="/home">
+                    <b class="logo-icon">
+                        <!-- Dark Logo icon -->
+                        <img src="images/police-handcuffs.png" alt="homepage" width="50" height="50"/>
+                    </b>
+                    <span class="logo-text">
+                        <!-- dark Logo text -->
+                        <img src="images/images.jpg" alt="homepage" />
+                    </span>
+                </a>
+            </div>
+        </nav>
+    </header>
+  </div>
+  <div>
+    <p style="text-align: center;">Welcome crime Tracker system</p>
+   </div>
+
+   <div class="container-fluid">
+    <div class="row justify-content-center">        
+        <div class="col-lg-4 col-md-12">
+            <div class="white-box ">
+              <div>
+                <p>CONTACT FORM</p>
+                <p><span class="wpcf7-form-control-wrap" data-name="your-name"><input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Your Name"/></span></p>
+                <p><span class="wpcf7-form-control-wrap" data-name="your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Your Email Address"/></span></p>
+                <p><span class="wpcf7-form-control-wrap" data-name="tel-419"><input type="tel" name="tel-419" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" aria-invalid="false" placeholder="Your Contact Number"/></span></p>
+                <p><span class="wpcf7-form-control-wrap" data-name="your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Your Message..."></textarea></span></p>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-12 col-md-12">
+        <div id="map" style="width: 100%; height: 500px; position: absolute;"></div>
+            <script>
+              var map = tt.map({
+                key: "BoLC9waGtIqMa7OF8GeW1E7cdODwiohH",
+                container: "map",
+                center: [18.629438,-33.894272], 
+                zoom:14,
+                "cluster": true,
+                "clusterRadius": 70
+              });
+              folium.Circle(
+              radius=5000,
+              color='crimson',
+              fill=False,).add_to(map)
+            </script>
+          </div>
+      </div>
+    </div>
+
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initMap">
+</script>
+
+</body>
+</html>
